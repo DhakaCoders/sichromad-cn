@@ -422,7 +422,7 @@ Header Responsive
 		display: none;
 	}
 	.nav-opener {
-	    padding: 11px 11px 14px 10px;
+	    padding: 8px 11px 12px 10px;
 	    max-width: 57px;
 	    width: 100%;
 	}
@@ -431,7 +431,7 @@ Header Responsive
 	}
 	.xs-contact-info a {
 	    width: 40px;
-	    height: 45px;
+	    height: 40px;
 	}
 	.xs-menu > ul > li {
 	    font-size: 32px;
