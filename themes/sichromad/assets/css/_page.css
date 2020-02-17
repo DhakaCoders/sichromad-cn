@@ -1,0 +1,68 @@
+
+/*
+=========================
+   fl-breadcrumb
+=========================
+*/
+.breadcrumbs{
+    padding:0;
+    font-size: 10px;
+    line-height: 12px;
+    font-weight: 400;
+    list-style: none;
+    margin: 0;
+}
+.breadcrumbs li{
+    display: inline-block;
+    float: left;
+}
+li.delim {
+    margin: 0 5px;
+    line-height: 14px;
+}
+.fl-home-icon{
+    padding-left: 23px;
+    position: relative;
+}
+.fl-home-icon:after{
+ content: "";
+ position: absolute;
+ left: 0;
+ top: 0;
+    background: url(../images/home-icon.png);
+    background-repeat: no-repeat; 
+    background-position:left 0px;
+    width: 10px;
+    height: 12px;
+    
+}
+.breadcrumbs a {
+    text-transform:lowercase;
+    display: inline-block;
+    vertical-align: baseline;
+    color: #939393;
+    text-decoration: none;
+}
+.breadcrumbs a:hover,
+li.active a {
+    color: #064771;
+}
+
+.page-content{
+    text-align: center;
+    padding: 300px 0;
+    background: #fff;
+}
+.page-content strong{
+    font-size: 50px;
+    line-height: 1;
+    display: inline-block;
+    vertical-align: baseline;
+    text-align: center;
+    font-weight: 700;
+    color: #064771;
+    padding-bottom: 30px;
+}
+.page-content h3{
+    margin: 0;
+}
