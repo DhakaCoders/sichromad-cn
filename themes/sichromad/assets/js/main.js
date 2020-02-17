@@ -33,6 +33,15 @@ $('.fancybox').fancybox({
 }
 
 
+if (windowWidth <= 767) {
+  $('.nav-opener').on('click',function(){
+    $('.xs-menu').slideToggle();
+  });
+}
+
+ 
+
+
 /**
 Responsive on 767px
 */

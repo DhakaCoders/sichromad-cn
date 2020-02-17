@@ -89,9 +89,14 @@ Containers
 .container-lg{
 
 }
+.sc-block-bg{
+	background: #fff;
+}
 .container{
-	max-width: 1150px;
+	max-width: 1230px;
 	width: 100%;
+	padding-left: 40px;
+	padding-right: 40px;
 }
 .container-md{
 
