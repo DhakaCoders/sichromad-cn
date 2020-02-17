@@ -292,15 +292,15 @@ Header Responsive
 	}
 	.nav-opener-btn {
 		position: relative;
-		width: 28px;
+		width: 35px;
 		height: 20px;
 		float: right;
-		margin-top: 4px;
+		margin-top: 1px;
 	}
 	.nav-opener-btn span{
 		display: block;
 		background: #fff;
-		height: 5px;
+		height: 6px;
 		transform: rotate(0deg);
 		-o-transform: rotate(0deg);
 		-ms-transform: rotate(0deg);
@@ -311,10 +311,10 @@ Header Responsive
 		width: 100%;
 	}
 	.nav-opener-btn span:nth-child(2){
-		top: 8px;
+		top: 10px;
 	}
 	.nav-opener-btn span:nth-child(3){
-		top: 16px;
+		top: 20px;
 	}
 	.nav-opener strong {
 		font-size: 38px;
@@ -377,7 +377,7 @@ Header Responsive
 
 @media(max-width: 575px){
 	.nav-opener {
-	    padding: 13px 10px 14px 10px;
+	    padding: 11px 10px 12px 10px;
 	    max-width: 160px;
 	    width: 100%;
 	}
@@ -386,8 +386,9 @@ Header Responsive
 	    line-height: 27px;
 	    padding-right: 5px;
 	}
-	.xs-contact-info a{
+	.xs-contact-info a {
 	    width: 50px;
+	    height: 50px;
 	}
 	.xs-menu > ul > li {
 		font-size: 35px;
@@ -405,6 +406,15 @@ Header Responsive
 		max-width:15px;
 		width: 100%; 
 	}
+	.nav-opener-btn span:nth-child(2){
+		top: 9px;
+	}
+	.nav-opener-btn span:nth-child(3){
+		top: 18px;
+	}
+	.nav-opener-btn {
+	    margin-top: 2px;
+	}
 }
 
 @media(max-width: 479px){
@@ -412,8 +422,8 @@ Header Responsive
 		display: none;
 	}
 	.nav-opener {
-	    padding: 12px 11px 13px 10px;
-	    max-width: 50px;
+	    padding: 11px 11px 14px 10px;
+	    max-width: 57px;
 	    width: 100%;
 	}
 	.nav-opener-btn{
