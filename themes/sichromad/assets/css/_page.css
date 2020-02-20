@@ -19,6 +19,14 @@
 li.delim {
     margin: 0 5px;
     line-height: 14px;
+    position: relative;
+    padding-left: 10px;
+}
+li.delim:before {
+    position: absolute;
+    content: ">";
+    left: 0;
+    top: 1px;
 }
 .fl-home-icon{
     padding-left: 23px;
@@ -39,7 +47,7 @@ li.delim {
 .breadcrumbs a {
     text-transform:lowercase;
     display: inline-block;
-    vertical-align: baseline;
+    vertical-align: text-bottom;
     color: #939393;
     text-decoration: none;
 }

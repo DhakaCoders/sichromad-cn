@@ -4,11 +4,6 @@ $('.navbar-toggle').on('click', function(){
 	$('#mobile-nav').slideToggle(300);
 });
 	
-//matchHeightCol
-if($('.mHc').length){
-  $('.mHc').matchHeight();
-};
-
 //$('[data-toggle="tooltip"]').tooltip();
 
 //banner animation
@@ -135,7 +130,5 @@ function initialize(){
 google.maps.event.addDomListener(window, 'load', initialize);
 
 }
-
-    new WOW().init();
 
 })(jQuery);
