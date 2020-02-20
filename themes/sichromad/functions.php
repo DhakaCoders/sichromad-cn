@@ -17,13 +17,10 @@ if( !function_exists('cbv_theme_setup') ){
 	    
 	  load_theme_textdomain( 'sichromad', get_template_directory() . '/languages' );
 		add_theme_support( 'title-tag' );
-		add_theme_support( 'woocommerce' );
 		add_theme_support('post-thumbnails');
 		if(function_exists('add_theme_support')) {
 			add_theme_support('category-thumbnails');
 		}
-        add_image_size( 'pgbanner', 1920, 310, true );
-
 		
 		// add size to media uploader
 		add_filter( 'image_size_names_choose', 'cbv_custom_image_sizes' );
@@ -62,8 +59,6 @@ add_action( 'wp_enqueue_scripts', 'cbv_theme_scripts');
 Includes->>
 */
 include_once(THEME_DIR .'/inc/breadcrumbs.php');
-include_once(THEME_DIR .'/inc/widgets-area.php');
-include_once(THEME_DIR .'/inc/cbv-functions.php');
 
 /**
 ACF Option pages->>
@@ -178,17 +173,6 @@ add_filter( 'acf/location/rule_match/wc_prod_attr', function( $match, $rule, $op
 
 add_filter( 'wpcf7_autop_or_not', '__return_false' );
 
-if( !function_exists('cbv_custom_both_breadcrump')){
-  function cbv_custom_both_breadcrump(){
-    if ( is_product_category() || is_product() || is_shop() || is_cart() || is_checkout()
-       || is_woocommerce() || is_product_tag() || is_account_page() || is_wc_endpoint_url()
-       || is_ajax()) {
-               woocommerce_breadcrumb();
-            }else{
-                cbv_breadcrumbs();
-            }
-    }
-}
 /**
 Debug->>
 */

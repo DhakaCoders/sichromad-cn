@@ -82,17 +82,17 @@
             <div class="xs-contact-info">
               <?php if( !empty( $show_telefoon ) ): ?>
               <a href="tel:<?php echo $telefoon; ?>">
-                <i><img src="assets/images/xs-phone-icon.png"></i>
+                <i><img src="<?php echo THEME_URI; ?>/assets/images/xs-phone-icon.png"></i>
               </a>
               <?php endif; ?>
               <?php if( !empty( $email ) ): ?>
               <a href="mailto:<?php echo $email; ?>">
-                <i><img src="assets/images/xs-email-icon.png"></i>
+                <i><img src="<?php echo THEME_URI; ?>/assets/images/xs-email-icon.png"></i>
               </a>
             <?php endif; ?>
             <?php if( !empty($gmapsurl) ): ?>
               <a href="<?php echo $gmapsurl; ?>">
-                <i><img src="assets/images/xs-map-icon.png"></i>
+                <i><img src="<?php echo THEME_URI; ?>/assets/images/xs-map-icon.png"></i>
               </a>
             <?php endif; ?>
             </div>

@@ -11,7 +11,7 @@ function cbv_breadcrumbs() {
   $text['page']     = __('Page %s', THEME_NAME); // text 'Page N'
   $text['cpage']    = __('Comment Page %s', THEME_NAME); // text 'Comment Page N'
 
-  $wrap_before    = '<div class="breadcrumbs clearfix"><ul class="ulc clearfix">'; // the opening wrapper tag
+  $wrap_before    = '<div class="clearfix"><ul class="breadcrumbs clearfix">'; // the opening wrapper tag
   $wrap_after     = '</ul></div>'; // the closing wrapper tag
   $sep            = ''; // separator between crumbs
   $sep_before     = ''; // tag before separator
@@ -20,7 +20,7 @@ function cbv_breadcrumbs() {
   $show_on_home   = 1; // 1 - show breadcrumbs on the homepage, 0 - don't show
   $show_current   = 1; // 1 - show current page title, 0 - don't show
   $show_home_link_on_blog = 1;
-  $before         = '<li class="active"><a href="javascript:void(0)">'; // tag before the current crumb
+  $before         = '<li class="delim"><a href="javascript:void(0)">'; // tag before the current crumb
   $after          = '</a></li>'; // tag after the current crumb
   /* === END OF OPTIONS === */
 
