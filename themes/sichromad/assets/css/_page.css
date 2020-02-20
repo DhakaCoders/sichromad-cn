@@ -27,6 +27,7 @@ li.delim:before {
     content: ">";
     left: 0;
     top: 1px;
+    color: #939393;
 }
 .fl-home-icon{
     padding-left: 23px;
