@@ -248,23 +248,28 @@ Header Responsive
 	.logo a img{
 		width: 100%;
 	}
-	.xs-nav-menu-wrp{
-		background: #fff;
-		padding: 0 0 3px;
-		position: relative;
+	.xs-nav-menu-wrp {
+	    background: #fff;
+	    padding: 0 0 3px 189px;
+	    position: relative;
 	}
 	.xs-contact-info{
 		float: left;
+		position: absolute;
+		left: 0;
+		top: 0;
+		bottom: 0;
 	}
-	.xs-contact-info a{
+	.xs-contact-info a {
 	    width: 60px;
 	    height: 54px;
 	    background: #064771;
-	    display: inline-block;
-	    vertical-align: baseline;
+	    display: block;
 	    text-align: center;
 	    text-decoration: none;
 	    position: relative;
+	    margin-right: 3px;
+	    float: left;
 	}
 	.xs-contact-info a i{
 		position: absolute;
@@ -281,7 +286,6 @@ Header Responsive
 	    z-index: 1;
 	    background: #31c3f2;
 	    padding: 13px 15px 14px 15px;
-	    max-width: 240px;
 	    width: 100%;
 	}
 	.nav-opener-btn span{
@@ -376,10 +380,11 @@ Header Responsive
 }
 
 @media(max-width: 575px){
+	.xs-nav-menu-wrp {
+	    padding: 0 0 3px 159px;
+	}
 	.nav-opener {
 	    padding: 11px 10px 12px 10px;
-	    max-width: 160px;
-	    width: 100%;
 	}
 	.nav-opener strong {
 	    font-size: 32px;
