@@ -1,7 +1,10 @@
-div.wpforms-container-full .wpforms-form label.wpforms-error {
-    padding: 10px 0;
+span.wpcf7-not-valid-tip {
+    font-size: 14px !important;
+    padding: 12px 0px !important;
 }
-
+div.wpcf7-validation-errors, div.wpcf7-acceptance-missing {
+    line-height: 100%;
+}
 
 /*
 ---------------------
