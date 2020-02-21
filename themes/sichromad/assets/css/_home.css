@@ -219,10 +219,18 @@ sc-blog-content-sec-wrp
 	background: #07578a;
 	float: left;
 	margin: 0 5px;
+	position: relative;
 }
-.sc-blog-pagination ul li:hover,
-.sc-blog-pagination ul li.active{
+.sc-blog-pagination ul li:hover{
 	background: #064771;
+	color: #31c3f2;
+}
+.sc-blog-pagination ul li span.current{
+	color: #31c3f2;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate( -50%, -50%);
 }
 .sc-blog-pagination ul li a{
 	display:block;

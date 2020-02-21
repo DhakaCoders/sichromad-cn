@@ -25,9 +25,12 @@ li.delim {
 li.delim:before {
     position: absolute;
     content: ">";
-    left: 2px;
+    left: -2px;
     top: 1px;
     color: #939393;
+}
+li.delim:first-child:before {
+    content: "";
 }
 .fl-home-icon{
     padding-left: 23px;

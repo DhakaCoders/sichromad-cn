@@ -26,7 +26,7 @@ function cbv_breadcrumbs() {
 
   global $post;
   $home_url       = home_url('/');
-  $link_before    = '<li>';
+  $link_before    = '<li class="delim">';
   $link_after     = '</li>';
   $link_attr      = '';
   $link_in_before = '<span class="item">';

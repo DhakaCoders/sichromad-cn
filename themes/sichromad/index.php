@@ -1,46 +1,54 @@
-<?php get_header(); ?>
+<?php 
+get_header(); 
+$pageID = get_option( 'page_for_posts' );
+?>
 <section class="sc-blog-content-sec-wrp">
   <div class="container sc-block-bg">
     <div class="row">
       <div class="col-sm-12">
+        <div class="breadcrumbs-wrp">
+         <?php cbv_breadcrumbs(); ?>
+        </div>
         <div class="sc-blog-dsc-wrp">
-          <h1>Where does it come from?</h1>
+          <h1><?php echo get_the_title($pageID); ?></h1>
+          <?php 
+             while(have_posts()): the_post();
+             $thumb_tag = wp_get_attachment_image_src(get_post_thumbnail_id( get_the_ID() ), 'bloggrid');
+             if( !empty($thumb_tag[0]) ){
+              $bloggrid = $thumb_tag[0];
+             }else{
+              $bloggrid = THEME_URI.'/assets/images/dfpgrid.jpg';
+             }
+             
+          ?> 
           <div class="sc-blog-dsc-innr clearfix">
             <div class="sc-blog-dsc-img">
-              <img src="<?php echo THEME_URI; ?>/assets/images/blog-post-img-1.png">
+              <a href="<?php the_permalink(); ?>"><img src="<?php echo $bloggrid; ?>" alt="<?php the_title(); ?>"></a>
             </div>
             <div class="sc-blog-dsc">
-              <h2>What is Lorem Ipsum?</h2>
-              <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+              <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+              <?php the_excerpt(); ?>...<a href="<?php the_permalink(); ?>">Read More >></a>
             </div>
           </div>
-          <div class="sc-blog-dsc-innr clearfix">
-            <div class="sc-blog-dsc-img">
-              <img src="<?php echo THEME_URI; ?>/assets/images/blog-post-img-1.png">
-            </div>
-            <div class="sc-blog-dsc">
-              <h2>What is Lorem Ipsum?</h2>
-              <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
-            </div>
-          </div>
-          <div class="sc-blog-dsc-innr clearfix">
-            <div class="sc-blog-dsc-img">
-              <img src="<?php echo THEME_URI; ?>/assets/images/blog-post-img-1.png">
-            </div>
-            <div class="sc-blog-dsc">
-              <h2>What is Lorem Ipsum?</h2>
-              <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
-            </div>
-          </div>
+          <?php endwhile; ?>
         </div>
         <div class="sc-blog-pagination text-center">
-          <ul class="clearfix">
-            <li><a href="#"><i class="fa fa-angle-double-left" aria-hidden="true"></i></a></li>
-            <li class="active"><a href="#">1</a></li>
-            <li><a href="#">2</a></li>
-            <li><a href="#">3</a></li>
-            <li><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i></a></li>
-          </ul>
+         <?php
+            global $wp_query;
+
+            $big = 999999999; // need an unlikely integer
+            $wp_query->query_vars['paged'] > 1 ? $current = $wp_query->query_vars['paged'] : $current = 1;
+
+            echo paginate_links( array(
+              'base'      => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+              'type'      => 'list',
+              'prev_text' => __('«'),
+              'next_text' => __('»'),
+              'format'    => '?paged=%#%',
+              'current'   => $current,
+              'total'     => $wp_query->max_num_pages
+            ) );
+            ?>
         </div>
       </div>
     </div>
