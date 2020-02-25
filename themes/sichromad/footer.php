@@ -31,7 +31,7 @@
             <div class="ftr-tp-btm-innr clearfix">
               <div class="ftr-tp-btm-info">
                 <ul class="clearfix">
-                  <?php if( !empty( $adres ) ) printf('<li><span>adres:</span><a href="%s">%s</a></li>', $gmaplink, $adres);  ?>
+                  <?php if( !empty( $adres ) ) printf('<li><span>adres:</span><a target="_blank" href="%s">%s</a></li>', $gmaplink, $adres);  ?>
                   <li>
                     <?php if( !empty( $show_telefoon ) ) printf('<span class="phone">mobiel:</span><a href="tel:%s">%s</a><br>', $telefoon, $show_telefoon);  ?>
                     <?php if( !empty( $e_mailadres ) ) printf('<span class="email">e-mail:</span><a href="mailto:%s">%s</a>', $e_mailadres, $e_mailadres);  ?>

@@ -54,7 +54,7 @@
 .phone-icon{
 	background: url(../images/phone-icon.png);
 	background-repeat: no-repeat;
-	background-position: left 8px top 2px;
+	background-position: left 8px top 1px;
 	background-size: 8px 12px;
 }
 .hdr-contact ul li a:hover{
@@ -141,8 +141,8 @@
 }
 .main-nav > ul > li.menu-item-has-children ul.sub-menu{
 	position: absolute;
-	top: 100%;
-	background: rgba(237,237,237,.8);
+	top: 25px;
+	background: rgba(237,237,237,1);
 	left: 4px;
 	padding: 17px 11px 8px 11px;
 	z-index: 30;
@@ -285,7 +285,8 @@ Header Responsive
 	    float: right;
 	    z-index: 1;
 	    background: #31c3f2;
-	    padding: 13px 15px 14px 15px;
+	    padding: 14px 15px 14px 14px;
+	    height: 54px;
 	    width: 100%;
 	}
 	.nav-opener-btn span{
@@ -297,7 +298,7 @@ Header Responsive
 	.nav-opener-btn {
 		position: relative;
 		width: 35px;
-		height: 20px;
+		height: 25px;
 		float: right;
 		margin-top: 1px;
 	}
@@ -380,21 +381,6 @@ Header Responsive
 }
 
 @media(max-width: 575px){
-	.xs-nav-menu-wrp {
-	    padding: 0 0 3px 159px;
-	}
-	.nav-opener {
-	    padding: 11px 10px 12px 10px;
-	}
-	.nav-opener strong {
-	    font-size: 32px;
-	    line-height: 27px;
-	    padding-right: 5px;
-	}
-	.xs-contact-info a {
-	    width: 50px;
-	    height: 50px;
-	}
 	.xs-menu > ul > li {
 		font-size: 35px;
 		line-height: 32px;
@@ -407,37 +393,9 @@ Header Responsive
 	    font-size: 27px;
 	    line-height: 29px;
 	}
-	.xs-contact-info a i img{
-		max-width:15px;
-		width: 100%; 
-	}
-	.nav-opener-btn span:nth-child(2){
-		top: 9px;
-	}
-	.nav-opener-btn span:nth-child(3){
-		top: 18px;
-	}
-	.nav-opener-btn {
-	    margin-top: 2px;
-	}
 }
 
 @media(max-width: 479px){
-	.nav-opener strong {
-		display: none;
-	}
-	.nav-opener {
-	    padding: 8px 11px 12px 10px;
-	    max-width: 57px;
-	    width: 100%;
-	}
-	.nav-opener-btn{
-		margin-top: 0;
-	}
-	.xs-contact-info a {
-	    width: 40px;
-	    height: 40px;
-	}
 	.xs-menu > ul > li {
 	    font-size: 32px;
 	    line-height: 30px;
@@ -450,9 +408,13 @@ Header Responsive
 	.xs-menu > ul > li.menu-item-has-children ul li {
 	    padding-top: 30px;
 	}
-
-}
-
-@media(max-width: 359px){
+	.nav-opener strong{
+		display: none;
+	}
+	.nav-opener{
+	    width: 60px;
+	    height: 54px;
+	    padding: 14px 12px 14px 13px;		
+	}
 
 }

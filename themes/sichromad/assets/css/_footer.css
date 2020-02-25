@@ -154,8 +154,6 @@ span.phone{
 	    padding-left: 18px;
 	}
 	
-	
-	
 }
 
 @media(max-width: 767px){
@@ -191,11 +189,9 @@ span.phone{
 	.ftr-btm-wrp {
 	    padding: 26px 0;
 	}
-}
-
-@media(max-width: 575px){
-	
-
+	.ftr-top-wrp{
+		background: #064771;
+	}
 }
 
 @media(max-width: 479px){
@@ -222,9 +218,5 @@ span.phone{
 	span.email {
 	    padding-right: 30px !important;
 	}
-
-}
-
-@media(max-width: 359px){
 
 }

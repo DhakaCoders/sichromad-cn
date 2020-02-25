@@ -11,9 +11,8 @@ div.wpcf7-validation-errors, div.wpcf7-acceptance-missing {
  Contact Form
 ---------------------
 */
-body .sc-dsc-wrp .wpcf7-form{
-	max-width: 345px;
-	width: 100%;
+.wpcf7-form{
+	margin-top: 15px;
 }
 
 body .sc-dsc-wrp .wpcf7-form .wpforms-field-container .wpforms-field{
@@ -101,7 +100,6 @@ body .sc-dsc-wrp .wpcf7-form .wpforms-field-container .wpforms-field input:-moz-
 }
 
 @media(max-width: 575px){
-
 	body .sc-dsc-wrp .wpcf7-form .wpforms-field-container .wpforms-field {
 	    width: 100%;
 	}

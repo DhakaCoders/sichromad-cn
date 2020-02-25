@@ -1,15 +1,12 @@
 .hm-banner-sec-wrp{
-	background-repeat: no-repeat !important;
-	background-size: cover !important;
-	background-position: center center !important;
-	min-height: 485px !important;
+	text-align: center;
 }
 .sc-content-wrp{
-	padding: 10px 0 250px;
+	padding: 10px 0 50px;
 }
 .sc-dsc-wrp{
 	padding-top: 25px;
-	padding-bottom: 190px;
+	padding-bottom: 50px;
 }
 .sc-dsc-wrp h1{
 	margin: 0;
@@ -20,7 +17,8 @@
 	vertical-align: baseline;
 	font-weight: 700;
 }
-.sc-dsc-wrp p a{
+.sc-dsc-wrp p a,
+.sc-blog-dsc a.readmore{
     display: inline-block;
     vertical-align: baseline;
     text-decoration: none;
@@ -29,7 +27,8 @@
     border-bottom: 1px solid #7ed9f7;
     line-height: 17px;
 }
-.sc-dsc-wrp p a:hover{
+.sc-dsc-wrp p a:hover,
+.sc-blog-dsc a.readmore:hover{
 	color: #064771;
 	border-color:#064771;
 }
@@ -42,15 +41,16 @@
 	list-style: none;
 	margin: 0;
 	padding: 0;
+	padding-top: 10px;
+	padding-bottom: 15px;
 }
 .sc-dsc-wrp ul li{
-	display: inline-block;
 	vertical-align: baseline;
 	position: relative;
 	padding-left: 25px;
 	font-size: 18px;
 	line-height: 20px;
-	padding-bottom: 25px;
+	margin-bottom: 10px;
 }
 .sc-dsc-wrp ul li:after{
 	content: '-';
@@ -254,9 +254,6 @@ sc-blog-content-sec-wrp
 
 
 @media(max-width: 1199px){
-	.hm-banner-sec-wrp {
-	    min-height: 455px !important;
-	}
 	.sc-content-wrp {
 	    padding: 10px 0 200px;
 	}
@@ -268,9 +265,6 @@ sc-blog-content-sec-wrp
 	}
 }
 @media(max-width: 991px){
-	.hm-banner-sec-wrp {
-	    min-height: 425px !important;
-	}
 	.sc-content-wrp {
 	    padding: 10px 25px 150px 25px;
 	}
@@ -290,9 +284,6 @@ sc-blog-content-sec-wrp
 	}
 }
 @media(max-width: 767px){
-	.hm-banner-sec-wrp {
-	    min-height: 380px !important;
-	}
 	.sc-content-wrp {
 	    padding: 10px 0 100px;
 	}
@@ -339,9 +330,6 @@ sc-blog-content-sec-wrp
 }
 
 @media(max-width: 575px){
-	.hm-banner-sec-wrp {
-	    min-height: 320px !important;
-	}
 	#sc-form-wrp .wpforms-field-container .wpforms-field {
 	    width: 100%;
 	}
@@ -351,13 +339,4 @@ sc-blog-content-sec-wrp
 	.page-content {
 	    padding: 100px 0;
 	}
-}
-
-@media(max-width: 479px){
-	
-
-}
-
-@media(max-width: 359px){
-
 }

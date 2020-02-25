@@ -1,11 +1,14 @@
 <?php get_header(); ?>
+
 <?php
-
 $standaardbanner = get_field('bannerimage', HOMEID);
-if( empty($standaardbanner) ) $standaardbanner = THEME_URI.'/assets/images/hm-banner-img.jpg';
+if( !empty($standaardbanner) ):
 ?>
+<section class="hm-banner-sec-wrp">
+  <img src="<?php echo $standaardbanner; ?>" alt="Page Banner">
+</section>
+<?php endif; ?>
 
-<section class="hm-banner-sec-wrp" style="background: url(<?php echo $standaardbanner; ?>);"></section>
 <section class="sc-content-sec-wrp">
   <div class="container sc-block-bg">
     <div class="row">

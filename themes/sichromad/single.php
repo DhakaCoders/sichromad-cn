@@ -1,4 +1,14 @@
 <?php get_header(); ?>
+
+<?php
+$standaardbanner = get_field('bannerimage', get_the_ID());
+if( !empty($standaardbanner) ):
+?>
+<section class="hm-banner-sec-wrp pageBanner">
+  <img src="<?php echo $standaardbanner; ?>" alt="Page Banner">
+</section>
+<?php endif; ?>
+
 <section class="sc-page-sec-wrp">
   <div class="container sc-block-bg">
     <div class="row">

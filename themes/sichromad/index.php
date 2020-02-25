@@ -2,6 +2,16 @@
 get_header(); 
 $pageID = get_option( 'page_for_posts' );
 ?>
+
+<?php
+$standaardbanner = get_field('bannerimage', $pageID);
+if( !empty($standaardbanner) ):
+?>
+<section class="hm-banner-sec-wrp pageBanner">
+  <img src="<?php echo $standaardbanner; ?>" alt="Page Banner">
+</section>
+<?php endif; ?>
+
 <section class="sc-blog-content-sec-wrp">
   <div class="container sc-block-bg">
     <div class="row">
@@ -27,7 +37,8 @@ $pageID = get_option( 'page_for_posts' );
             </div>
             <div class="sc-blog-dsc">
               <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-              <?php the_excerpt(); ?>...<a href="<?php the_permalink(); ?>">Read More >></a>
+              <?php the_excerpt(); ?>
+              <a class="readmore" href="<?php the_permalink(); ?>">Read More >></a>
             </div>
           </div>
           <?php endwhile; ?>
